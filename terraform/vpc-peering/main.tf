@@ -1,3 +1,22 @@
+
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "4.7.0"
+    }
+  }
+}
+
+provider "aws" {
+  region = "us-east-1"
+}
+
+terraform {
+  required_version = "~> 1.0"
+}
+
+
 locals {
   aws_account_id              = "281624143694"
   source_vpc_id               = "vpc-052e1ada0be0b9ee1"
